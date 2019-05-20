@@ -1,0 +1,17 @@
+{
+  "name": "onesignal-cordova-plugin-android-badges",
+  "version": "1.0.0",
+  "description": "Custom Badges for Cordova Android when using OneSignal",
+  "cordova": {
+    "id": "onesignal-cordova-plugin-android-badges",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Mark van Beek <mark@appelit.com>",
+  "license": "MIT"
+}
