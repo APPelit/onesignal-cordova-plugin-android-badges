@@ -11,7 +11,7 @@
         <engine name="cordova-android" version=">=5.1.0" />
     </engines>
 
-    <dependency id="onesignal-cordova-plugin" version=">=2.0.0"/>
+    <dependency id="onesignal-cordova-plugin" version=">=3.0.0"/>
 
     <platform name="android">
         <framework src="me.leolin:ShortcutBadger:1.1.22@aar" />
@@ -19,13 +19,8 @@
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <meta-data android:name="com.onesignal.BadgeCount" android:value="DISABLE"/>
 
-            <service android:name="com.appelit.os_badges.BadgeSetterExtender"
-                     android:permission="android.permission.BIND_JOB_SERVICE"
-                     android:exported="false">
-                <intent-filter>
-                    <action android:name="com.onesignal.NotificationExtender"/>
-                </intent-filter>
-            </service>
+            <meta-data android:name="com.onesignal.NotificationServiceExtension"
+                       android:value="com.appelit.os_badges.BadgeSetterExtender" />
         </config-file>
 
         <source-file src="src/android/BadgeSetterExtender.java" target-dir="src/com/appelit/os_badges/" />
